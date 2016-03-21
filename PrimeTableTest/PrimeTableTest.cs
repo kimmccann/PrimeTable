@@ -44,6 +44,13 @@ namespace PrimeTableTest
             List<int> result = PrimeTable.PrimeTable.getPrimes(10);
             CollectionAssert.AreEqual(primesList, result);
         }
-
+        [TestMethod]
+        public void multiplicationTableTest()
+        {
+            int prime1 = 4;
+            List<int> primes = PrimeTable.PrimeTable.getPrimes(1);
+            List<int> result = PrimeTable.PrimeTable.multiplicationTable(primes);
+            Assert.IsTrue(result.Contains(prime1));
+        }
     }
 }

@@ -52,5 +52,10 @@ namespace PrimeTable
             }
             return primeNos;
         }
+
+        public static List<int> multiplicationTable(List<int> primes)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
