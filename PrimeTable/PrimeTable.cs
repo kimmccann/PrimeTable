@@ -17,6 +17,9 @@ namespace PrimeTable
                 Console.WriteLine("Please enter a number greater than or equal to 1");
                 n = int.Parse(Console.ReadLine());
             }
+            getPrimes(n);
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
         }
 
         //Method gets the first n prime numbers

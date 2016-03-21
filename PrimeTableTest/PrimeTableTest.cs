@@ -26,5 +26,6 @@ namespace PrimeTableTest
             List<int> result = PrimeTable.PrimeTable.getPrimes(3);
             CollectionAssert.AreEqual(primesList, result);
         }
+
     }
 }
