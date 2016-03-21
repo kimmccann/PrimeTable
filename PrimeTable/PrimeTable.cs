@@ -41,6 +41,7 @@ namespace PrimeTable
                     if ((next % primeNos[i]) == 0)
                     {
                         isPrimeNo = false;
+                        break;
                     }
                 }
                 if (isPrimeNo == true)
