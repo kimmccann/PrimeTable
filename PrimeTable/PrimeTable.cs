@@ -68,5 +68,11 @@ namespace PrimeTable
             }
             return result;
         }
+
+        //This method formats our data into a tabular form as expected and outputs it to the console
+        public static void formatOutput(List<int> primeNos, List<int> multResult, int n)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
