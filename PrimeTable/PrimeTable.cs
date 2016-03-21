@@ -17,7 +17,8 @@ namespace PrimeTable
                 Console.WriteLine("Please enter a number greater than or equal to 1");
                 n = int.Parse(Console.ReadLine());
             }
-            getPrimes(n);
+            List<int> primeNos = getPrimes(n);
+            multiplicationTable(primeNos);
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
