@@ -27,5 +27,23 @@ namespace PrimeTableTest
             CollectionAssert.AreEqual(primesList, result);
         }
 
+        [TestMethod]
+        public void firstTenPrimes()
+        {
+            List<int> primesList = new List<int>();
+            primesList.Add(2);
+            primesList.Add(3);
+            primesList.Add(5);
+            primesList.Add(7);
+            primesList.Add(11);
+            primesList.Add(13);
+            primesList.Add(17);
+            primesList.Add(19);
+            primesList.Add(23);
+            primesList.Add(29);
+            List<int> result = PrimeTable.PrimeTable.getPrimes(3);
+            CollectionAssert.AreEqual(primesList, result);
+        }
+
     }
 }
