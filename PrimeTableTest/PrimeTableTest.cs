@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using PrimeTable;
 
 namespace PrimeTableTest
 {
@@ -7,8 +9,12 @@ namespace PrimeTableTest
     public class PrimeTableTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void firstPrime()
         {
+            int prime1 = 2;
+            List<int> result = PrimeTable.getPrimes(1);
+            Assert.IsTrue(result.Contains(prime1));
         }
+
     }
 }
