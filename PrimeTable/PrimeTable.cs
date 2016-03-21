@@ -53,9 +53,19 @@ namespace PrimeTable
             return primeNos;
         }
 
+        //This method takes our list of primes and multiplies them all by each other
         public static List<int> multiplicationTable(List<int> primes)
         {
-            throw new NotImplementedException();
+            List<int> result = new List<int>();
+            for (int i = 0; i < primes.Count; i++)
+            {
+                for (int j = 0; j < primes.Count; j++)
+                {
+                    int temp = primes[i] * primes[j];
+                    result.Add(temp);
+                }
+            }
+            return result;
         }
     }
 }
