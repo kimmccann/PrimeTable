@@ -41,7 +41,7 @@ namespace PrimeTableTest
             primesList.Add(19);
             primesList.Add(23);
             primesList.Add(29);
-            List<int> result = PrimeTable.PrimeTable.getPrimes(3);
+            List<int> result = PrimeTable.PrimeTable.getPrimes(10);
             CollectionAssert.AreEqual(primesList, result);
         }
 
