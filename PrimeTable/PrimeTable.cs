@@ -24,6 +24,28 @@ namespace PrimeTable
         {
             List<int> primeNos = new List<int>();
             primeNos.Add(2); //Adds 2 by default as this is the first prime
+            bool isPrimeNo = true;
+
+            int next = 3;
+
+            while (primeNos.Count < n)
+            {
+                int squareRoot = (int)Math.Sqrt(next);
+                //Loop checks if our number if prime by checking if it's divisable by every prime number we've already found
+                for (int i = 0; (int)primeNos[i] <= squareRoot; i++)
+                {
+                    isPrimeNo = true;
+                    if ((next % primeNos[i]) == 0)
+                    {
+                        isPrimeNo = false;
+                    }
+                }
+                if (isPrimeNo == true)
+                {
+                    primeNos.Add(next);
+                }
+                next = next + 1; 
+            }
             return primeNos;
         }
     }
