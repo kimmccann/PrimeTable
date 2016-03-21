@@ -18,7 +18,8 @@ namespace PrimeTable
                 n = int.Parse(Console.ReadLine());
             }
             List<int> primeNos = getPrimes(n);
-            multiplicationTable(primeNos);
+            List<int> result = multiplicationTable(primeNos);
+            formatOutput(primeNos, result, n);
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
@@ -72,7 +73,8 @@ namespace PrimeTable
         //This method formats our data into a tabular form as expected and outputs it to the console
         public static void formatOutput(List<int> primeNos, List<int> multResult, int n)
         {
-            throw new NotImplementedException();
+            String primeRow = string.Join("\t |", primeNos.ToArray()); //formatting our prime numbers so that they have a space and | to create the table format
+            Console.WriteLine("| \t |" + primeRow + "\t |"); //Printing our top line of prime numbers with the empty space in the left hand corner
         }
     }
 }
