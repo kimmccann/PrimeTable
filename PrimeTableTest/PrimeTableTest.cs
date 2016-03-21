@@ -52,5 +52,25 @@ namespace PrimeTableTest
             List<int> result = PrimeTable.PrimeTable.multiplicationTable(primes);
             Assert.IsTrue(result.Contains(prime1));
         }
+
+        [TestMethod]
+        public void multiplicationTableTest2()
+        {
+            int prime3 = 25;
+            List<int> primes = PrimeTable.PrimeTable.getPrimes(3);
+            List<int> result = PrimeTable.PrimeTable.multiplicationTable(primes);
+            Assert.IsTrue(result.Contains(prime3));
+        }
+
+        [TestMethod]
+        public void multiplicationTableTest3()
+        {
+            int prime10 = 841;
+            List<int> primes = PrimeTable.PrimeTable.getPrimes(10);
+            List<int> result = PrimeTable.PrimeTable.multiplicationTable(primes);
+            Assert.IsTrue(result.Contains(prime10));
+        }
+
+
     }
 }
