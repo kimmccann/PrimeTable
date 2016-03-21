@@ -48,7 +48,7 @@ namespace PrimeTable
                 {
                     primeNos.Add(next);
                 }
-                next = next + 1; 
+                next = next + 2;  //We do not need to check any even number as they'll all not be prime
             }
             return primeNos;
         }
