@@ -12,7 +12,7 @@ namespace PrimeTableTest
         public void firstPrime()
         {
             int prime1 = 2;
-            List<int> result = PrimeTable.getPrimes(1);
+            List<int> result = PrimeTable.PrimeTable.getPrimes(1);
             Assert.IsTrue(result.Contains(prime1));
         }
 

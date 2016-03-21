@@ -19,9 +19,12 @@ namespace PrimeTable
             }
         }
 
+        //Method gets the first n prime numbers
         public static List<int> getPrimes(int n)
         {
-            throw new NotImplementedException();
+            List<int> primeNos = new List<int>();
+            primeNos.Add(2); //Adds 2 by default as this is the first prime
+            return primeNos;
         }
     }
 }

@@ -53,6 +53,12 @@
     <Compile Include="PrimeTableTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrimeTable\PrimeTable.csproj">
+      <Project>{484db611-3b02-4ef0-990a-5f2274b93f9f}</Project>
+      <Name>PrimeTable</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
