@@ -73,8 +73,18 @@ namespace PrimeTable
         //This method formats our data into a tabular form as expected and outputs it to the console
         public static void formatOutput(List<int> primeNos, List<int> multResult, int n)
         {
+            List<List<int>> splitLists = new List<List<int>>();
             String primeRow = string.Join("\t |", primeNos.ToArray()); //formatting our prime numbers so that they have a space and | to create the table format
             Console.WriteLine("| \t |" + primeRow + "\t |"); //Printing our top line of prime numbers with the empty space in the left hand corner
+            for (int i = 0; i < multResult.Count; i += n)
+            {
+                splitLists.Add(multResult.GetRange(i, Math.Min(n, multResult.Count - i))); //Splitting our list into our rows
+            }
+            for (int j = 0; j < splitLists.Count; j++)
+            {
+                String rows = string.Join("\t |", splitLists[j].ToArray()) + "\t |"; //formatting our rows so that they have a space and | to create the table format
+                Console.WriteLine("| " + primeNos[j] + "\t |" + rows); //Printing our rows with the prime number at the start
+            }
         }
     }
 }
